@@ -14,7 +14,7 @@
             <li>
               
               @auth
-              <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>User Profile</a>
+              <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>User Profile <!-- {{ Auth::user()->name }}--></a> 
               @else
               <a href="{{ route('login') }}"><i class="icon fa fa-lock"></i>Login/Register</a>
               @endauth
