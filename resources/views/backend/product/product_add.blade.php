@@ -185,7 +185,7 @@
 			</div> <!-- end col md 4 -->
 			
 		</div> <!-- end 3RD row  -->
-
+		
 
 <div class="row"> <!-- start 4th row  -->
 			<div class="col-md-4">
@@ -282,6 +282,8 @@
 		</div> <!-- end 5th row  -->
 
 
+
+
 <div class="row"> <!-- start 6th row  -->
 			<div class="col-md-4">
 
@@ -334,6 +336,9 @@
 		</div> <!-- end 6th row  -->
 
 
+
+
+
 <div class="row"> <!-- start 7th row  -->
 			<div class="col-md-6">
 
@@ -359,10 +364,13 @@
 			</div> <!-- end col md 6 -->		 
 			
 		</div> <!-- end 7th row  -->
+
+		
+		 
 		 
 	 
 <div class="row"> <!-- start 8th row  -->
-			<div class="col-md-6">
+			<div class="col-md-12">
 
 	    <div class="form-group">
 			<h5>Long Description English <span class="text-danger">*</span></h5>
@@ -373,9 +381,14 @@
 	 		 </div>
 		</div>
 				
-			</div> <!-- end col md 6 -->
+			</div> <!-- end col md 12 -->
+			
+		</div> <!-- end 8th row  -->
 
-			<div class="col-md-6">
+
+<div class="row"> <!-- start 9th row  -->
+
+			<div class="col-md-12">
 
 	     <div class="form-group">
 			<h5>Long Description Bangla <span class="text-danger">*</span></h5>
@@ -387,10 +400,10 @@
 		</div>
 				 
 				
-			</div> <!-- end col md 6 -->		 
+			</div> <!-- end col md 12 -->		 
 			
-		</div> <!-- end 8th row  -->
-	 
+		</div> <!-- end 9th row  -->
+
 	 <hr>
 
 	<div class="row">
@@ -410,6 +423,7 @@
 		</div>
 	</div>
 </div>
+
 
 
 <div class="col-md-6">
