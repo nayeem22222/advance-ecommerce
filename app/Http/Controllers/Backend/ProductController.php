@@ -94,7 +94,7 @@ class ProductController extends Controller
 	    return redirect()->route('manage-product')->with($notification);
 
 	} // end method
-
+    /*
 	public function ManageProduct(){
 
 		$products = Product::latest()->get();
