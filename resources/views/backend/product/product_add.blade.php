@@ -22,7 +22,7 @@
 				<div class="col">
 
   <form method="post" action="{{ route('product-store') }}" enctype="multipart/form-data" >
-		 	@csrf
+  		@csrf
 
 			<div class="row">
 	<div class="col-12">	

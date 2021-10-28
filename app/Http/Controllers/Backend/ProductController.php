@@ -23,8 +23,8 @@ class ProductController extends Controller
 		return view('backend.product.product_add',compact('categories','brands'));
 
 	}
-    /*
-	public function StoreProduct(Request $request){
+
+    public function StoreProduct(Request $request){
 
         $image = $request->file('product_thambnail');
     	$name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
@@ -94,6 +94,7 @@ class ProductController extends Controller
 	    return redirect()->route('manage-product')->with($notification);
 
 	} // end method
+    
     /*
 	public function ManageProduct(){
 
