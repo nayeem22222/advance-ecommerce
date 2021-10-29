@@ -334,35 +334,40 @@
 		</div> <!-- end 7th row  -->
 		 
 	 
-<div class="row"> <!-- start 8th row  -->
-			<div class="col-md-6">
+	<div class="row"> <!-- start 8th row  -->
+		<div class="col-md-12">
 
-	    <div class="form-group">
-			<h5>Long Description English <span class="text-danger">*</span></h5>
-			<div class="controls">
-	<textarea id="editor1" name="long_descp_en" rows="10" cols="80" required="">
-		{!! $products->long_descp_en !!}
-						</textarea>  
-	 		 </div>
-		</div>
+			<div class="form-group">
+				<h5>Long Description English <span class="text-danger">*</span></h5>
+				<div class="controls">
+					<textarea id="editor1" name="long_descp_en" rows="10" cols="80" required="">
+					{!! $products->long_descp_en !!}
+					</textarea>  
+				</div>
+			</div>
+					
+		</div> <!-- end col md 12 -->
 				
-			</div> <!-- end col md 6 -->
+	</div> <!-- end 8th row  -->
 
-			<div class="col-md-6">
 
-	     <div class="form-group">
-			<h5>Long Description Bangla <span class="text-danger">*</span></h5>
-			<div class="controls">
-	<textarea id="editor2" name="long_descp_bd" rows="10" cols="80">
-		{!! $products->long_descp_bd !!}
-						</textarea>       
-	 		 </div>
-		</div>
-				 
+	<div class="row"> <!-- start 9th row  -->
+
+		<div class="col-md-12">
+
+			<div class="form-group">
+				<h5>Long Description Bangla <span class="text-danger">*</span></h5>
+				<div class="controls">
+					<textarea id="editor2" name="long_descp_bd" rows="10" cols="80">
+					{!! $products->long_descp_bd !!}
+					</textarea>       
+				</div>
+			</div>
+					
+					
+		</div> <!-- end col md 12 -->		 
 				
-			</div> <!-- end col md 6 -->		 
-			
-		</div> <!-- end 8th row  -->
+	</div> <!-- end 9th row  -->
 
 	 
 	 <hr>
@@ -404,9 +409,9 @@
 		</div>
 			</div>
 		</div>
-						</div>
+	</div>
 						 
-						<div class="text-xs-right">
+<div class="text-xs-right">
 <input type="submit" class="btn btn-rounded btn-primary mb-5" value="Update Product">
 						</div>
 					</form>
@@ -427,48 +432,48 @@
 		<!-- ///////////////// Start Multiple Image Update Area ///////// -->
 
  <section class="content">
- 	<div class="row">
+	<div class="row">
+		
+		<div class="col-md-12">
+						<div class="box bt-3 border-info">
+						<div class="box-header">
+				<h4 class="box-title">Product Multiple Image <strong>Update</strong></h4>
+						</div>
 
-<div class="col-md-12">
-				<div class="box bt-3 border-info">
-				  <div class="box-header">
-		 <h4 class="box-title">Product Multiple Image <strong>Update</strong></h4>
-				  </div>
-
-			
+					
 		<form method="post" action="{{ route('update-product-image') }}" enctype="multipart/form-data">
-        @csrf
+			@csrf
 			<div class="row row-sm">
 				@foreach($multiImgs as $img)
 				<div class="col-md-3">
 
-<div class="card">
-  <img src="{{ asset($img->photo_name) }}" class="card-img-top" style="height: 130px; width: 280px;">
-  <div class="card-body">
-    <h5 class="card-title">
-<a href="{{ route('product.multiimg.delete',$img->id) }}" class="btn btn-sm btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i> </a>
-     </h5>
-    <p class="card-text"> 
-    	<div class="form-group">
-    		<label class="form-control-label">Change Image <span class="tx-danger">*</span></label>
-    		<input class="form-control" type="file" name="multi_img[{{ $img->id }}]">
-    	</div> 
-    </p>
-   
-  </div>
-</div> 		
-				
+					<div class="card">
+					<img src="{{ asset($img->photo_name) }}" class="card-img-top" style="height: 180px; width: 280px;">
+					<div class="card-body">
+						<h5 class="card-title">
+					<a href="{{ route('product.multiimg.delete',$img->id) }}" class="btn btn-sm btn-danger" id="delete" title="Delete Data"><i class="fa fa-trash"></i> </a>
+						</h5>
+						<p class="card-text"> 
+							<div class="form-group">
+								<label class="form-control-label">Change Image <span class="tx-danger">*</span></label>
+								<input class="form-control" type="file" name="multi_img[{{ $img->id }}]">
+							</div> 
+						</p>
+					
+					</div>
+					</div> 		
+					
 				</div><!--  end col md 3		 -->	
 				@endforeach
 
-			</div>			
+						</div>			
 
-			<div class="text-xs-right">
-<input type="submit" class="btn btn-rounded btn-primary mb-5" value="Update Image">
-		 </div>
-<br><br>
+					<div class="text-xs-right">
+						<input type="submit" class="btn btn-rounded btn-primary mb-5" value="Update Image">
+					</div>
+					<br><br>
 
-
+			
 
 		</form>		   
 
@@ -476,12 +481,12 @@
 
 
 
-				</div>
-			  </div>
- 
+						</div>
+					</div>
+		
 
- 		
- 	</div> <!-- // end row  -->
+		
+	</div> <!-- // end row  -->
  	
  </section>
 <!-- ///////////////// End Start Multiple Image Update Area ///////// -->
@@ -491,58 +496,58 @@
 	<!-- ///////////////// Start Thambnail Image Update Area ///////// -->
 
  <section class="content">
- 	<div class="row">
+	<div class="row">
 
-<div class="col-md-12">
-				<div class="box bt-3 border-info">
-				  <div class="box-header">
-		 <h4 class="box-title">Product Thambnail Image <strong>Update</strong></h4>
-				  </div>
+		<div class="col-md-12">
+			<div class="box bt-3 border-info">
+			<div class="box-header">
+			<h4 class="box-title">Product Thambnail Image <strong>Update</strong></h4>
+			</div>
 
-			
-		<form method="post" action="{{ route('update-product-thambnail') }}" enctype="multipart/form-data">
-        @csrf
+					
+			<form method="post" action="{{ route('update-product-thambnail') }}" enctype="multipart/form-data">
+				@csrf
 
-     <input type="hidden" name="id" value="{{ $products->id }}">
-    <input type="hidden" name="old_img" value="{{ $products->product_thambnail }}">
+				<input type="hidden" name="id" value="{{ $products->id }}">
+				<input type="hidden" name="old_img" value="{{ $products->product_thambnail }}">
 
-			<div class="row row-sm">
-				 
-				<div class="col-md-3">
+				<div class="row row-sm">
+							
+					<div class="col-md-3">
 
-<div class="card">
-  <img src="{{ asset($products->product_thambnail) }}" class="card-img-top" style="height: 130px; width: 280px;">
-  <div class="card-body">
-     
-    <p class="card-text"> 
-    	<div class="form-group">
-    		<label class="form-control-label">Change Image <span class="tx-danger">*</span></label>
-    <input type="file" name="product_thambnail" class="form-control" onChange="mainThamUrl(this)"  >
-     <img src="" id="mainThmb">
-    	</div> 
-    </p>
-   
-  </div>
-</div> 		
-				
-				</div><!--  end col md 3		 -->	
-				 
+						<div class="card">
+						<img src="{{ asset($products->product_thambnail) }}" class="card-img-top" style="height: 180px; width: 280px;">
+						<div class="card-body">
+							
+							<p class="card-text"> 
+								<div class="form-group">
+									<label class="form-control-label">Change Image <span class="tx-danger">*</span></label>
+									<input type="file" name="product_thambnail" class="form-control" onChange="mainThamUrl(this)"  >
+									<img src="" id="mainThmb">
+								</div> 
+							</p>
+						
+						</div>
+						</div> 		
+									
+					</div><!--  end col md 3 -->
+							
 
-			</div>			
+				</div>			
 
-			<div class="text-xs-right">
-<input type="submit" class="btn btn-rounded btn-primary mb-5" value="Update Image">
-		 </div>
-<br><br>
-
-		</form>
-
+				<div class="text-xs-right">
+					<input type="submit" class="btn btn-rounded btn-primary mb-5" value="Update Image">
 				</div>
-			  </div>
- 
+				<br><br>
 
- 		
- 	</div> <!-- // end row  -->
+			</form>
+
+						</div>
+		</div>
+		
+
+				
+	</div> <!-- // end row  -->
  	
  </section>
 <!-- ///////////////// End Start Thambnail Image Update Area ///////// -->
