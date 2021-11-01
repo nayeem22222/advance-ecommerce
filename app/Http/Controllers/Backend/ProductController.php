@@ -114,7 +114,7 @@ class ProductController extends Controller
 		return view('backend.product.product_edit',compact('categories','brands','subcategory','subsubcategory','products','multiImgs'));
 
 	}
-/*
+
 	public function ProductDataUpdate(Request $request){
 
 		$product_id = $request->id;
@@ -221,7 +221,7 @@ class ProductController extends Controller
 
     } // end method
 
-
+/*
  //// Multi Image Delete ////
     public function MultiImageDelete($id){
      	$oldimg = MultiImg::findOrFail($id);

@@ -23,7 +23,7 @@
 
   <form method="post" action="{{ route('product-update') }}" >
 		 	@csrf
-			<input type="hidden" name="id" value="{{ $products->id }}">
+			 <input type="hidden" name="id" value="{{ $products->id }}">
 					  <div class="row">
 	<div class="col-12">	
 
@@ -431,7 +431,7 @@
 
 		<!-- ///////////////// Start Multiple Image Update Area ///////// -->
 
- <section class="content">
+		<section class="content">
 	<div class="row">
 		
 		<div class="col-md-12">
@@ -560,12 +560,12 @@
 
 
 
-	  </div>
-
- 
+</div>
 
 
- 
+
+
+
  <script type="text/javascript">
       $(document).ready(function() {
         $('select[name="category_id"]').on('change', function(){
