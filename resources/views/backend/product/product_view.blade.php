@@ -72,7 +72,7 @@
 
 
 		<td width="30%">
- <a href="#" class="btn btn-primary" title="Product Details Data"><i class="fa fa-eye"></i> </a>
+ <a href="{{ route('product.delete',$item->id) }}" class="btn btn-primary" title="Product Details Data"><i class="fa fa-eye"></i> </a>
 
  <a href="{{ route('product.edit',$item->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-pencil"></i> </a>
 
