@@ -39,9 +39,11 @@ Route::group(['prefix'=> 'admin', 'middleware'=>['admin:admin']], function(){
 //     return view('dashboard');
 // })->name('dashboard');
 
+Route::middleware(['auth:admin'])->group(function(){
+
 Route::middleware(['auth:sanctum,admin', 'verified'])->get('/admin/dashboard', function () {
     return view('admin.index');
-})->name('dashboard');
+})->name('dashboard')->middleware('auth:admin');
 
 // Admin All Routes
 
@@ -56,6 +58,8 @@ Route::post('/admin/profile/store', [AdminProfileController::class, 'AdminProfil
 Route::get('/admin/change/password', [AdminProfileController::class, 'AdminChangePassword'])->name('admin.change.password');
 
 Route::post('/update/change/password', [AdminProfileController::class, 'AdminUpdateChangePassword'])->name('update.change.password');
+
+});  // end Middleware admin
 
 
 // User All Routes
@@ -80,6 +84,8 @@ Route::post('/user/password/update', [IndexController::class, 'UserPasswordUpdat
 
 
 // Admin Brand All Routes
+
+Route::middleware(['auth:admin'])->group(function(){
 
 Route::prefix('brand')->group(function(){
     
@@ -188,3 +194,5 @@ Route::prefix('slider')->group(function(){
 
     Route::get('/active/{id}', [SliderController::class, 'SliderActive'])->name('slider.active');
 });
+
+});  // end Middleware admin
