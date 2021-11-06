@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\SliderController;
 
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\LanguageController;
 use App\Models\User;
 
 /*
@@ -196,3 +197,11 @@ Route::prefix('slider')->group(function(){
 });
 
 });  // end Middleware admin
+
+
+//// Frontend All Routes /////
+/// Multi Language All Routes ////
+
+Route::get('/language/bangla', [LanguageController::class, 'Bangla'])->name('bangla.language');
+
+Route::get('/language/english', [LanguageController::class, 'English'])->name('english.language');

@@ -6,17 +6,27 @@
       <div class="header-top-inner">
         <div class="cnt-account">
           <ul class="list-unstyled">
-            <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
-            <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
-            <li><a href="#"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
-            <li><a href="#"><i class="icon fa fa-check"></i>Checkout</a></li>
+            <li><a href="#"><i class="icon fa fa-user"></i>
+            @if(session()->get('language') == 'bangla') প্রোফাইল @else My Account @endif
+            </a></li>
+            <li><a href="#"><i class="icon fa fa-heart"></i>
+            @if(session()->get('language') == 'bangla') ইচ্ছেতালিকা @else Wishlist @endif
+            </a></li>
+            <li><a href="#"><i class="icon fa fa-shopping-cart"></i>
+            @if(session()->get('language') == 'bangla') মাইকার্ট @else My Cart @endif
+            </a></li>
+            <li><a href="#"><i class="icon fa fa-check"></i>
+            @if(session()->get('language') == 'bangla') চেকআউট @else Checkout @endif
+            </a></li>
 
             <li>
               
               @auth
-              <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>User Profile <!-- {{ Auth::user()->name }}--></a> 
+              <a href="{{ route('login') }}"><i class="icon fa fa-user"></i>@if(session()->get('language') == 'bangla') ইউজার প্রোফাইল @else User Profile @endif <!-- {{ Auth::user()->name }}--></a> 
               @else
-              <a href="{{ route('login') }}"><i class="icon fa fa-lock"></i>Login/Register</a>
+              <a href="{{ route('login') }}"><i class="icon fa fa-lock"></i>
+              @if(session()->get('language') == 'bangla') লগইন/রেজিস্টার @else Login/Register @endif
+              </a>
               @endauth
               
             </li>
@@ -34,11 +44,15 @@
                 <li><a href="#">GBP</a></li>
               </ul>
             </li>
-            <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">English </span><b class="caret"></b></a>
+            <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">
+               @if(session()->get('language') == 'bangla') ভাষা: বাংলা @else Language @endif
+              </span><b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">English</a></li>
-                <li><a href="#">French</a></li>
-                <li><a href="#">German</a></li>
+                @if(session()->get('language') == 'bangla')       
+                <li><a href="{{ route('english.language') }}">English</a></li>
+                @else
+                <li><a href="{{ route('bangla.language') }}">বাংলা</a></li>
+                @endif               
               </ul>
             </li>
           </ul>
