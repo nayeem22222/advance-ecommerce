@@ -28,7 +28,7 @@
 							<tr>
 								<th>Category </th>
 								<th>SubCategory En</th>
-								<th>SubCategory BD </th>
+								<th>SubCategory Ban </th>
 								<th>Action</th>
 								 
 							</tr>
